@@ -18,6 +18,11 @@ config :rocketpay, RocketpayWeb.Endpoint,
   pubsub_server: Rocketpay.PubSub,
   live_view: [signing_salt: "6xkGSbmd"]
 
+# Falando pro Ecto q toda tabela criada, o :id vai ser binery_id (UUID)
+config :rocketpay, Rocketpay.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
