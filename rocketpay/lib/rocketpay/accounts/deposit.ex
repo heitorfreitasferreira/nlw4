@@ -14,8 +14,7 @@ defmodule Rocketpay.Accounts.Deposit do
         {:error, reason}
 
       # assim da certo mas era pra ser
-      {:ok, %{account_deposit: account}} ->
-        # {:ok, %{account: account}} ->
+      {:ok, %{deposit: account}} ->
         {:ok, account}
     end
   end
