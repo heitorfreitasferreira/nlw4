@@ -13,7 +13,9 @@ defmodule Rocketpay.Accounts.Withdraw do
       {:error, _operation, reason, _changes} ->
         {:error, reason}
 
-      {:ok, %{update_balance: account}} ->
+      # assim da certo mas era pra ser
+      {:ok, %{account_withdraw: account}} ->
+        # {:ok, %{account: account}} ->
         {:ok, account}
     end
   end
